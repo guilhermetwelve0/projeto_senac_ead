@@ -1,5 +1,4 @@
 using System.Collections.Generic;
-using Microsoft.EntityFrameworkCore;
 using System.Linq;
 
 namespace Biblioteca.Models
@@ -47,7 +46,14 @@ namespace Biblioteca.Models
                             break;
 
                         case "Livro":
-                            query = bc.Emprestimos.Where(e => e.Livro.Titulo.Contains(filtro.Filtro));
+                            List<Livro> LivrosFiltrados = bc.Livros.Where(l => l.Titulo.Contains(filtro.Filtro)).ToList();
+
+                            List<int> LivrosIds = new List<int>();
+                            for (int i = 0; i < LivrosFiltrados.Count; i++)
+                            { LivrosIds.Add(LivrosFiltrados[i].Id); }
+
+                            query = bc.Emprestimos.Where(e => LivrosIds.Contains(e.LivroId));
+                            var debug = query.ToList();
                             break;
 
                         default:
@@ -60,7 +66,14 @@ namespace Biblioteca.Models
                     // caso filtro não tenha sido informado
                     query = bc.Emprestimos;
                 }
-                return query.Include(e => e.Livro).OrderBy(e => e.DataDevolucao).ToList();
+                List<Emprestimo> ListaConsulta = query.OrderBy(e => e.DataEmprestimo).ToList();
+
+                for (int i = 0; i < ListaConsulta.Count; i++)
+                {
+                    ListaConsulta[i].Livro = bc.Livros.Find(ListaConsulta[i].LivroId);
+                }
+
+                return ListaConsulta;
             }
         }
 
