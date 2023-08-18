@@ -106,3 +106,8 @@ C:\Users\guilh\Desktop\projeto_biblioteca_inicial\obj\Debug\netcoreapp3.1\Razor\
 C:\Users\guilh\Desktop\projeto_biblioteca_inicial\obj\Debug\netcoreapp3.1\Razor\Views\Usuario\EditarUsuario.cshtml.g.cs
 C:\Users\guilh\Desktop\projeto_biblioteca_inicial\obj\Debug\netcoreapp3.1\Razor\Views\Usuario\ListaUsuarios.cshtml.g.cs
 C:\Users\guilh\Desktop\projeto_biblioteca_inicial\obj\Debug\netcoreapp3.1\Razor\Views\Usuario\Permissao.cshtml.g.cs
+C:\Users\guilh\Desktop\projeto_biblioteca_inicial\obj\Debug\netcoreapp3.1\staticwebassets\Biblioteca.StaticWebAssets.Pack.cache
+C:\Users\guilh\Desktop\projeto_biblioteca_inicial\obj\Debug\netcoreapp3.1\staticwebassets\msbuild.Biblioteca.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\guilh\Desktop\projeto_biblioteca_inicial\obj\Debug\netcoreapp3.1\staticwebassets\msbuild.build.Biblioteca.props
+C:\Users\guilh\Desktop\projeto_biblioteca_inicial\obj\Debug\netcoreapp3.1\staticwebassets\msbuild.buildMultiTargeting.Biblioteca.props
+C:\Users\guilh\Desktop\projeto_biblioteca_inicial\obj\Debug\netcoreapp3.1\staticwebassets\msbuild.buildTransitive.Biblioteca.props
